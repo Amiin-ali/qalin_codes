@@ -11,7 +11,7 @@
       background-color: #0F112B;
       color: #aaaaaa;
       font-family: Arial, sans-serif;
-      background-size: cover;
+      
       
     }
     .header-text {
@@ -109,29 +109,79 @@
             max-width: 100%;
             height: auto;
         }
+        .d-flex {
+    display: flex;
+    flex-wrap: wrap; /* Ensures content stacks on small screens */
+    gap: 20px; /* Adds space between flex items */
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto; /* Ensures images scale proportionally */
+  }
+
+  .text-container {
+    flex: 1;
+    min-width: 300px; /* Ensures text section doesn't shrink too much */
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      margin-top: 20px;
+    }
+
+    .text-container {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+      font-size: 1rem; /* Adjust paragraph size for readability */
+    }
+
+    .btn {
+      font-size: 1rem;
+      padding: 10px 20px; /* Adjust button padding */
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      font-size: 0.9rem;
+    }
+  }
   </style>
 </head>
 <body>
     <!-- Navigation Bar -->
      <div>
-    <nav class="navbar navbar-expand-sm navbar-dark mt-1 my-4">
-      <img src="logo.png" style="width: 120px; margin-left: 16px;">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse  mt-2 d-flex" style="padding-left: 300px ; color: #fff;" >
-        <nav class="gap-4 d-flex" style="justify-content: space-between; margin-right: 310px;">
-          <ul class="nav justify-content-center gap-4 fw-bold">
-
-            <li class="nav-item">Courses</li>
-            <li class="nav-item">Roadmaps</li>
-            <li class="nav-item">Forum</li>
-            <li class="nav-item">Contact Us</li>
-            
+      <nav class="navbar navbar-expand-sm navbar-dark mt-1 my-4">
+        <img src="logo.png" class="ms-3" style="width: 120px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-2" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-auto gap-4 text-center fw-bold">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Courses</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Roadmaps</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Forum</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Contact Us</a></li>
           </ul>
-          
-        </nav>
-        <div><a href="#" class="btn btn-primary ms-3 rounded-pill py-3 px-4" style="margin-right: 5px;">Member Area</a></div>
+          <a href="#" class="btn btn-primary rounded-pill py-3 px-4">Member Area</a>
+        </div>
+      </nav>
+        
       </div>
     </nav>
   </div>
@@ -147,7 +197,7 @@
         </div>
       </div>
       <div class="col-md-6">
-       <img src="boxx-01.png" style="width: 400px; height: 450px; margin-top: -80px;">
+       <img src="boxx-01.png" class="img-fluid mx-auto d-none d-md-block" style="width: 400px; height: 450px; margin-top: -80px;">
       </div>
     </div>
   </div>
@@ -156,27 +206,31 @@
 
   </div>
 
-<div class="d-flex px-4" style="margin-top: 50px; margin-bottom: 40px;">
-  
-  <div>
-    <img src="sectionn-01.png"  style="background-size: cover; width:600px;"data-aos="fade-right"
-    data-aos-offset="200"
-    data-aos-easing="ease-in-sine">
-  </div>
-  <section class="py-5" style="margin-top: 60px;"data-aos="zoom-out-left">
-    <div class="container">
-      <h1 class="mb-4 fs-1" style="color: #fff;"><span style="color: #AA54A0; font-weight: bolder; font-size: 40px;">Qalin Codes</span> Empowering the Next Generation of Coders</h1>
-      <p class="mb-4">
-        Qalin Codes is your gateway to mastering programming skills through comprehensive and
-         interactive online courses. Whether you're a beginner or looking to expand your expertise, 
-         we provide expertly crafted lessons in web development, coding, and software design. With a 
-         focus on hands-on learning and real-world projects, Qalin Codes empowers you to
-         turn your coding dreams into reality. Join us and unlock your potential in the world of programming!
-      </p>
-      <a href="#" class="btn  btn-lg mt-4 button" >Join the Course</a>
+  <div class="d-flex flex-wrap px-4" style="margin-top: 50px; margin-bottom: 40px;">
+    <div class="image-container" style="flex: 1; min-width: 300px;">
+      <img src="sectionn-01.png" class="img-fluid" 
+        style="background-size: cover; width: 100%;" 
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
     </div>
-  </section>
-</div>
+    <section class="text-container py-5" style="flex: 1; margin-top: 60px;" data-aos="zoom-out-left">
+      <div class="container">
+        <h1 class="mb-4 fs-1 text-light" style="color: #fff;">
+          <span style="color: #AA54A0; font-weight: bolder; font-size: 40px;">Qalin Codes</span> 
+          Empowering the Next Generation of Coders
+        </h1>
+        <p class="mb-4">
+          Qalin Codes is your gateway to mastering programming skills through comprehensive and
+          interactive online courses. Whether you're a beginner or looking to expand your expertise, 
+          we provide expertly crafted lessons in web development, coding, and software design. With a 
+          focus on hands-on learning and real-world projects, Qalin Codes empowers you to
+          turn your coding dreams into reality. Join us and unlock your potential in the world of programming!
+        </p>
+        <a href="#" class="btn btn-lg mt-4 button">Join the Course</a>
+      </div>
+    </section>
+  </div>
 <!--section 2-->
 <section class="custom-section">
   <div class="container">
