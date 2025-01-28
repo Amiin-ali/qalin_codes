@@ -7,7 +7,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <style>
+    :root{
+        --PrimaryColor: #0F112B;
+        --SecondaryColor: #25245F;
+        --AccedentColor: #AA54A0;
+    }
+</style>
  
 </head>
 <body class="bg-[#0F112B] text-gray-400 font-sans">
@@ -15,85 +21,88 @@
   <nav class="flex items-center justify-between py-4 items-center">
     <img src="logo.png" class="ml-4 w-32 ">
     <ul class="flex space-x-8 font-normal text-2xl">
-      <li><a class="text-white hover:text-gray-300" href="index.html">Courses</a></li>
-      <li><a class="text-white hover:text-gray-300" href="Roadmaps.html">Roadmaps</a></li>
-      <li><a class="text-white hover:text-gray-300" href="forum.html">Forum</a></li>
-      <li><a class="text-white hover:text-gray-300" href="contact.html">Contact Us</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="index.html">Courses</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="forum.html">Forum</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
     </ul>
     <a href="login.html" class="btn btn-primary rounded-full py-3 px-6 bg-white text-[#AA54A0] font-bold mr-4">Sign Up</a>
   </nav>
-<!--sec 1-->
-
-<div class="flex flex-col lg:flex-row items-center justify-center p-10 text-white">
-    <!-- Left Side -->
-    <div class="flex flex-col items-center lg:items-start lg:w-1/2">
-      <h1 class="text-3xl font-bold mb-4 text-center lg:text-left">
-        Simplify online interactions <br> between <span class="text-[#AA54A0]">Professors </span>and <span class="text-[#AA54A0]">Students</span>!
-      </h1>
-      <img src="login22.webp" alt="Illustration" class="w-full max-w-md rounded-lg" />
+  <!--sign in-->
+  <div class="box-container flex    text-white w-[70%] my-[1%] mx-auto p-4">
+    <div class="left-box  pt-5 pl-2 w-[55%] bg-[--SecondaryColor] ">
+    <div class="header ">
+        <img src="" alt="" class="w-auto h-10">
     </div>
-    <!-- Right Side -->
-    <div class=" shadow-lg rounded-lg p-10 lg:w-1/2 mt-[80px]">
-      <h2 class="text-3xl font-bold mb-4 text-white">Hello, welcome back</h2>
-      <form>
-        <label class="block text-white font-medium">Email</label>
-        <input type="email" class="w-full px-4 py-2 border rounded-lg mb-4" placeholder="Example: email@example.com" />
-        
-        <label class="block text-white font-medium">Password</label>
-        <input type="password" class="w-full px-4 py-2 border rounded-lg mb-4" placeholder="Enter your password" />
-        
-        <button class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg">Login</button>
-      </form>
-      <div class="text-center mt-4">
-        <p class="text-sm text-gray-500">Or sign in using</p>
-        <div class="flex justify-center space-x-4 mt-2">
-          <button class="p-2 border rounded-lg"><img src="facebook.png" alt="Facebook" class="w-6 h-6" /></button>
-          <button class="p-2 border rounded-lg"><img src="tik-tok.png" alt="Google" class="w-6 h-6" /></button>
-          <button class="p-2 border rounded-lg"><img src="whatsapp.png" alt="Apple" class="w-6 h-6" /></button>
+    <div class="info ml-20 my-10  w-[75%]  ">
+        <h1 class="text-[--AccedentColor] font-bold text-4xl mb-2">welcome back</h1>
+        <span class="text-xl text-pink-200">please enter your details</span>
+        <!-- sign with google container -->
+        <div class="sign-in w-[80%]  flex my-6 py-3  items-center justify-center border-2 border-[--AccedentColor] ">
+            <img src="google.png" class="w-[40px] px-2">
+            <h2 class="font-medium capitalize">sign in with google</h2>
         </div>
-      </div>
-    </div>
-  </div>
-  
+
+        <!-- form -->
+
+        <form action="" method="post" class="w-[80%]">
+            <!-- inputs -->
+            <div class="input-box  w-[100%] mb-3">
+                <label for="" class="font-medium text-xl  ">Email address</label>
+            <input type="text" name="" id="" placeholder=" " class="block  w-[100%] mt-2 bg-transparent text-white outline-none border-[2px] border-[--AccedentColor]  py-2 px-3 rounded-md">
+            
+            </div>
+            <div class="input-box  w-[100%] mb-4">
+                <label for="" class="font-medium text-xl  ">password</label>
+            <input type="password" name="" id="password" placeholder=" " class="block  w-[100%] mt-2 bg-transparent text-white outline-none border-[2px] border-[--AccedentColor]  py-2 px-3 rounded-md">
+            
+            </div>
+
+            <!-- privecy party -->
+
+            <div class="privecy flex justify-between ">
+                <div class="remember">
+                    <input type="checkbox" id="check" >
+                    <label for="check" class="capitalize  " >remmember me</label>
+                </div>
+                <a href="#" class="text-[blue] font-medium capitalize underline">forgot password</a>
+            </div>
+
+            <!-- submit button -->
+            <div class="btn bg-[--AccedentColor] text-center py-2 my-4 rounded-md" >
+                <button type="submit" class="text-md">Sign in</button>
+            </div>
+
+            <!--  sign up & new account -->
+
+            <div class="privecy  flex justify-center ">
+                <div class="account">
+                    <p class="text-sm  ">Don't have an account? </p>
+                </div>
+                <a href="#" class="text-[blue] text-sm ml-2 font-medium capitalize underline">sign up</a>
+            </div>
+        </form>
+
+    </div>
+
+    </div>
+    <div class="img-box w-[45%] h-75 bg-red-400 ">
+        <img src="login-page.png" alt="" class="w-[100%] h-[100%]">
+
+    </div>
+
+</div>
+
+
   <!-- Footer -->
-  <footer class="bg-[#0F112B] text-white py-7 relative">
-    <div class="absolute pb-[10px] top-2 left-[-2] w-full h-10 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
-
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mt-[30px]">
-        <div>
-            <h2 class="text-3xl font-bold text-[#b34fa2] flex items-center">
-                <span class="text-4xl">Q</span>alin <span class="ml-1">Codes</span>
-            </h2>
-            <p class="mt-4 text-gray-400">Qalin Codes is your gateway to mastering programming skills through comprehensive and interactive online courses.</p>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">USEFUL LINKS</h3>
-            <ul class="mt-3 space-y-2">
-                <li><a href="login.html" class="text-gray-400 hover:text-white">Login</a></li>
-                <li><a href="index.html" class="text-gray-400 hover:text-white">courses</a></li>
-                <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">COURSES</h3>
-            <ul class="mt-3 space-y-2">
-                <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
-                <li><a href="#coursess" class="text-gray-400 hover:text-white">Pricing</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">CONTACT</h3>
-            <p class="mt-3 text-gray-400">support@QalinCodes.com</p>
-            <p class="text-gray-400">Company Registered in Mogadishu, Somalia</p>
-        </div>
-    </div>
-    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
-    <div class="text-center text-gray-400 mt-10 border-t border-gray-700 pt-5">
+  <footer>
+    <div class="text-center text-gray-400 mt-10 border-t border-gray-700 pt-5 pb-10">
         <p>&copy; 2025 QalinCodes.com - <a href="#" class="text-[#b34fa2] hover:underline">Privacy</a> | <a href="#" class="text-[#b34fa2] hover:underline">Terms of Service</a></p>
-        <button class="mt-4 bg-[#b34fa2] text-white px-6 py-2 rounded-full text-lg hover:bg-[#963b85]">Enroll now</button>
     </div>
 </footer>
 
+ <!-- animation link -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
   <script>
