@@ -10,34 +10,57 @@
  
 </head>
 <body class="bg-[#0F112B] text-gray-400 font-sans">
-  <!-- Navigation Bar -->
-  <nav class="flex items-center justify-between py-4 items-center">
-    <img src="logo.png" class="ml-4 w-32 ">
-    <ul class="flex space-x-8 font-normal text-2xl">
-      <li><a class="rounded-full py-1 px-6 hover:text-white text-[#AA54A0]" href="index.html">Courses</a></li>
-      <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
-      <li><a class="text-white hover:text-[#AA54A0]" href="forum.html">Forum</a></li>
-      <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
-    </ul>
-    <a href="login.html" class="btn btn-primary rounded-full py-3 px-6 bg-[#AA54A0] text-white mr-4">Sign Up</a>
-  </nav>
+<!-- Navigation Bar -->
+<nav class="flex flex-wrap items-center justify-between py-4 px-4 md:px-8">
+  <img src="logo.png" class="w-24 md:w-32" alt="Logo">
 
-  <!-- Hero Section -->
-  <div class="flex flex-wrap items-center mt-2 px-10">
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-      <h1 class=" text-[80px] font-light text-white">
-        <span class="text-[#AA54A0] font-normal ">Grow</span> <span class=" ">Your</span> <span class="text-[#AA54A0] font-normal ">Skills</span>
-      </h1>
-      <p class="">Unlock your potential with personalized mentorship and hands-on learning &mdash; empowering you to succeed in the digital world.</p>
-      <div class="mt-7 ">
-        <a href="#coursess" class="btn bg-[#AA54A0] text-white py-2 px-10 rounded-full text-2xl">All Courses</a>
-        <a href="#" class="btn border border-white text-white py-2 px-10 rounded-full text-2xl ml-5">Enroll Now</a>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 text-center">
-      <img  src="boxx-01.png" class="mx-auto w-[400px]">
+  <!-- Hamburger Button -->
+  <label for="menu-toggle" class="md:hidden cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#AA54A0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </label>
+  
+  <!-- Hidden Checkbox for Toggle -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+  <!-- Navigation Links -->
+  <ul 
+    class="hidden peer-checked:flex flex-col md:flex md:flex-row md:space-x-6 lg:space-x-8 font-medium text-lg lg:text-2xl w-full md:w-auto md:items-center mt-4 md:mt-0"
+  >
+    <li><a class="rounded-full py-1 px-4 md:px-6 hover:text-white text-[#AA54A0]" href="index.html">Courses</a></li>
+    <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
+    <li><a class="text-white hover:text-[#AA54A0]" href="forum.html">Forum</a></li>
+    <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
+  </ul>
+
+  <a 
+    href="login.html" 
+    class="btn btn-primary rounded-full py-2 md:py-3 px-5 md:px-6 bg-[#AA54A0] text-white"
+  >
+    Sign Up
+  </a>
+</nav>
+
+
+<!-- Hero Section -->
+<div class="flex flex-wrap items-center mt-2 px-4 md:px-10">
+  <div class="w-full md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+    <h1 class="text-4xl md:text-[60px] lg:text-[80px] font-light text-white leading-tight">
+      <span class="text-[#AA54A0] font-medium">Grow</span> Your <span class="text-[#AA54A0] font-medium">Skills</span>
+    </h1>
+    <p class="text-sm md:text-base lg:text-lg text-gray-300 mt-4">
+      Unlock your potential with personalized mentorship and hands-on learning &mdash; empowering you to succeed in the digital world.
+    </p>
+    <div class="mt-6 md:mt-8">
+      <a href="#coursess" class="btn bg-[#AA54A0] text-white py-2 px-6 md:py-2 md:px-10 rounded-full text-base md:text-2xl">All Courses</a>
+      <a href="#" class="btn border border-white text-white py-2 px-6 md:py-2 md:px-10 rounded-full text-base md:text-2xl ml-3 md:ml-5">Enroll Now</a>
     </div>
   </div>
+  <div class="w-full md:w-1/2 text-center">
+    <img src="boxx-01.png" class="mx-auto w-[250px] md:w-[350px] lg:w-[400px]">
+  </div>
+</div>
 
   <!-- Section 1 -->
   <div class="flex flex-wrap items-center mt-20 px-4 ">
@@ -78,13 +101,11 @@
           </p>
           <p class="text-lg font-bold text-white">$13.99</p>
           <p class="text-sm text-gray-500 line-through text-white">$41.99</p>
-          <span class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded">
-            Enroll Now
-          </span>
+          <a class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded" href="forum.html">Enroll Now</a>
         </div>
       </div>
     
-      <!-- Card 1 -->
+      <!-- Card 2 -->
       <div class="bg-[#0C3152] rounded-lg shadow-lg overflow-hidden">
         <img
           class="w-full h-40 object-cover"
@@ -103,9 +124,7 @@
           </p>
           <p class="text-lg font-bold text-white">$15.99</p>
           <p class="text-sm text-gray-500 line-through text-white">$54.99</p>
-          <span class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded">
-            Enroll Now
-          </span>
+          <a class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded" href="forum.html">Enroll Now</a>
         </div>
       </div>
       <!--card 3-->
@@ -127,9 +146,7 @@
           </p>
           <p class="text-lg font-bold text-white">$13.99</p>
           <p class="text-sm text-gray-500 line-through text-white">$74.99</p>
-          <span class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded">
-            Enroll Now
-          </span>
+          <a class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded" href="forum.html">Enroll Now</a>
         </div>
       </div>
     
@@ -152,9 +169,7 @@
           </p>
           <p class="text-lg font-bold text-white">$13.99</p>
           <p class="text-sm text-gray-500 line-through text-white">$74.99</p>
-          <span class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded">
-            Enroll Now
-          </span>
+          <a class="bg-[#AA54A0] text-white text-xs font-semibold px-2 py-1 rounded" href="forum.html">Enroll Now</a>
         </div>
       </div>
   
@@ -183,46 +198,64 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-[#0F112B] text-white py-7 relative">
-    <div class="absolute pb-[10px] top-2 left-[-2] w-full h-10 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
+ <!-- Footer -->
+<footer class="bg-[#0F112B] text-white py-7 relative">
+  <!-- Top Gradient -->
+  <div class="absolute pb-[10px] top-2 left-[-2] w-full h-10 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mt-[30px]">
-        <div>
-            <h2 class="text-3xl font-bold text-[#b34fa2] flex items-center">
-                <span class="text-4xl">Q</span>alin <span class="ml-1">Codes</span>
-            </h2>
-            <p class="mt-4 text-gray-400">Qalin Codes is your gateway to mastering programming skills through comprehensive and interactive online courses.</p>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">USEFUL LINKS</h3>
-            <ul class="mt-3 space-y-2">
-                <li><a href="login.html" class="text-gray-400 hover:text-white">Login</a></li>
-                <li><a href="index.html" class="text-gray-400 hover:text-white">courses</a></li>
-                <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">COURSES</h3>
-            <ul class="mt-3 space-y-2">
-                <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
-                <li><a href="#coursess" class="text-gray-400 hover:text-white">Pricing</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold text-[#b34fa2]">CONTACT</h3>
-            <p class="mt-3 text-gray-400">support@QalinCodes.com</p>
-            <p class="text-gray-400">Company Registered in Mogadishu, Somalia</p>
-        </div>
-    </div>
-    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
-    <div class="text-center text-gray-400 mt-10 border-t border-gray-700 pt-5">
-        <p>&copy; 2025 QalinCodes.com - <a href="#" class="text-[#b34fa2] hover:underline">Privacy</a> | <a href="#" class="text-[#b34fa2] hover:underline">Terms of Service</a></p>
-        <button class="mt-4 bg-[#b34fa2] text-white px-6 py-2 rounded-full text-lg hover:bg-[#963b85]">Enroll now</button>
-    </div>
+  <!-- Footer Content -->
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-[30px]">
+      <!-- Logo Section -->
+      <div>
+          <h2 class="text-3xl font-bold text-[#b34fa2] flex items-center justify-center md:justify-start">
+              <img src="logo.png" class="w-32">
+          </h2>
+          <p class="mt-4 text-gray-400 text-center md:text-left">
+              Qalin Codes is your gateway to mastering programming skills through comprehensive and interactive online courses.
+          </p>
+      </div>
+      
+      <!-- Useful Links -->
+      <div>
+          <h3 class="text-lg font-semibold text-[#b34fa2] text-center md:text-left">USEFUL LINKS</h3>
+          <ul class="mt-3 space-y-2 text-center md:text-left">
+              <li><a href="login.html" class="text-gray-400 hover:text-white">Login</a></li>
+              <li><a href="index.html" class="text-gray-400 hover:text-white">Courses</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+          </ul>
+      </div>
+
+      <!-- Courses -->
+      <div>
+          <h3 class="text-lg font-semibold text-[#b34fa2] text-center md:text-left">COURSES</h3>
+          <ul class="mt-3 space-y-2 text-center md:text-left">
+              <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+              <li><a href="#coursess" class="text-gray-400 hover:text-white">Pricing</a></li>
+          </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+          <h3 class="text-lg font-semibold text-[#b34fa2] text-center md:text-left">CONTACT</h3>
+          <p class="mt-3 text-gray-400 text-center md:text-left">support@QalinCodes.com</p>
+          <p class="text-gray-400 text-center md:text-left">Company Registered in Mogadishu, Somalia</p>
+      </div>
+  </div>
+
+  <!-- Bottom Gradient -->
+  <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#b34fa2] to-transparent"></div>
+
+  <!-- Footer Bottom -->
+  <div class="text-center text-gray-400 mt-10 border-t border-gray-700 pt-5">
+      <p>&copy; 2025 QalinCodes.com - 
+          <a href="#" class="text-[#b34fa2] hover:underline">Privacy</a> | 
+          <a href="#" class="text-[#b34fa2] hover:underline">Terms of Service</a>
+      </p>
+      <button class="mt-4 bg-[#b34fa2] text-white px-6 py-2 rounded-full text-lg hover:bg-[#963b85]">
+          Enroll now
+      </button>
+  </div>
 </footer>
-
-
 
   <script>
     AOS.init();

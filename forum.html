@@ -11,16 +11,152 @@
 </head>
 <body class="bg-[#0F112B] text-gray-400 font-sans">
   <!-- Navigation Bar -->
-  <nav class="flex items-center justify-between py-4 items-center">
-    <img src="logo.png" class="ml-4 w-32 ">
-    <ul class="flex space-x-8 font-normal text-2xl">
-      <li><a class="text-white hover:text-[#AA54A0]" href="index.html">Courses</a></li>
-      <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
-      <li><a class="rounded-full py-1 px-6 hover:text-white text-[#AA54A0]" href="forum.html">Forum</a></li>
-      <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
-    </ul>
-    <a href="login.html" class="btn btn-primary rounded-full py-3 px-6 bg-[#AA54A0] text-white mr-4">Sign Up</a>
-  </nav>
+<nav class="flex flex-wrap items-center justify-between py-4 px-4 md:px-8">
+  <img src="logo.png" class="w-24 md:w-32" alt="Logo">
+
+  <!-- Hamburger Button -->
+  <label for="menu-toggle" class="md:hidden cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#AA54A0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </label>
+  
+  <!-- Hidden Checkbox for Toggle -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+  <!-- Navigation Links -->
+  <ul 
+    class="hidden peer-checked:flex flex-col md:flex md:flex-row md:space-x-6 lg:space-x-8 font-medium text-lg lg:text-2xl w-full md:w-auto md:items-center mt-4 md:mt-0"
+  >
+    <li><a class="text-white hover:text-[#AA54A0]" href="index.html">Courses</a></li>
+    <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
+    <li><a class="rounded-full py-1 px-4 md:px-6 hover:text-white text-[#AA54A0]" href="forum.html">Forum</a></li>
+    <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
+  </ul>
+
+  <a 
+    href="login.html" 
+    class="btn btn-primary rounded-full py-2 md:py-3 px-5 md:px-6 bg-[#AA54A0] text-white"
+  >
+    Sign Up
+  </a>
+</nav>
+
+<!--pay-->
+<div class="lg:flex" id="forumm">
+<div class="flex justify-center p-6 w-full">
+  <div class="rounded-lg shadow-lg overflow-hidden my-4 border border-white rounded-lg p-1">
+    <!-- Get Started -->
+    <h2 class="text-xl font-semibold mb-2 text-white">Get started</h2>
+    <p class="text-gray-600 text-sm mb-4">
+      Providing your email allows us to send you everything you need for your purchase.
+    </p>
+    
+    <input type="email" placeholder="name@example.com" class="w-full border rounded-md p-2 mb-2" />
+    <div class="flex items-center mb-4">
+      <input type="checkbox" id="promos" class="mr-2" />
+      <label for="promos" class="text-sm text-white">Yes, send me promotions and news.</label>
+    </div>
+
+    <!-- Payment Information -->
+    <h2 class="text-xl font-semibold text-white">Payment information</h2>
+    <p class="text-gray-600 text-sm mb-4">All transactions are secure and encrypted.</p>
+
+    <div class="flex gap-2 mb-4 bg-[#0F112B] rounded-full py-2 justify-center">
+      <img src="google.png" class="w-[40px] px-2">
+      <h2 class="font-medium capitalize text-white">Google pay</h2>
+      
+    </div>
+
+    <div class="border p-4 rounded-md">
+      <label class="block text-sm font-medium text-white">Card Number</label>
+      <input type="text" placeholder="1234 1234 1234 1234" class="w-full border rounded-md p-2 mb-2" />
+      
+      <div class="flex gap-2">
+        <div class="w-1/2">
+          <label class="block text-sm font-medium text-white">Expiration Date</label>
+          <input type="text" placeholder="MM / YY" class="w-full border rounded-md p-2" />
+        </div>
+        <div class="w-1/2">
+          <label class="block text-sm font-medium text-white">CVC</label>
+          <input type="text" placeholder="CVC" class="w-full border rounded-md p-2" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <h2 class="text-xl font-semibold mt-6 text-white">Address</h2>
+
+    <label class="block text-sm font-medium mt-2 text-white">Name on Card</label>
+    <input type="text" placeholder="your name" class="w-full border rounded-md p-2" />
+
+    <label class="block text-sm font-medium mt-2 text-white">Country</label>
+    <select class="w-full border rounded-md p-2">
+      <option>Somalia</option>
+      <option>United States</option>
+      <option>United Kingdom</option>
+    </select>
+
+    <label class="block text-sm font-medium mt-2 text-white">Street Address</label>
+    <input type="text" placeholder="123 Main St" class="w-full border rounded-md p-2" />
+
+    <label class="block text-sm font-medium mt-2 text-white">City</label>
+    <input type="text" placeholder="City" class="w-full border rounded-md p-2" />
+
+    <div class="flex items-center mt-4">
+      <input type="checkbox" id="same-address" class="mr-2" />
+      <label for="same-address" class="text-sm text-white">Delivery address same as billing</label>
+    </div>
+
+    <button class="w-full bg-[#AA54A0] text-white p-2 rounded-md mt-6">Subscribe</button>
+  </div>
+</div>
+<!--subscribe-->
+<div class="mr-10 mt-4 pt-5">
+  <div class=" w-[550px] rounded-lg shadow-lg overflow-hidden my-4 border border-white rounded-lg p-1">
+    <h3 class="text-2xl font-semibold mb-1 text-white mt-4 ml-3">
+      Mobile Development
+    </h3>
+    <div class=" w-[400px] ml-10 my-10 rounded-2xl shadow-lg overflow-hidden my-4 border border-white rounded-lg p-1 bg-white">
+     
+      <div class="p-4 flex">
+<div>
+  <p class="bg-[#AA54A0] py-2 px-4 m w-[110px] text-white  font-bold rounded-lg">All-Access subscribers</p>
+</div>       
+ <div>
+  <p class="text-md text-gray-400 mb-2 ml-5">
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+      <div>
+        <p class="text-md text-black mb-2 ml-5">$29/month</p>
+      </div>
+      
+      </div>
+    <div class="flex mt-12">      
+     <div>
+      <p class="text-md text-black mb-2 ml-5">
+        Billed today (USD)
+            </p>
+          </div>
+          <div>
+            <p class="text-md text-black mb-2 ml-[155px]">$29.00</p>
+          </div></div>
+    </div>
+    <p class="text-gray-400 text-sm mb-4 ml-5">All transactions are secure and encrypted.</p>
+
+    <div class="flex gap-2 mb-4 bg-[#0F112B] rounded-full py-1 justify-center">
+      
+      <h2 class="font-medium capitalize text-black text-2xl">Subscribe</h2>
+    </div>
+    <p class="text-gray-400 text-sm mb-4 ml-5">By completing this purchase, you agree to Code with Mosh's Privacy & Terms, and Teachable's Privacy & Terms.</p>
+
+  </div>
+  
+</div>
+
+</div>
+<!--pay-->
 
 
 
