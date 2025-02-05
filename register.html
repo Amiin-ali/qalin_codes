@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{
+        --PrimaryColor: #0F112B;
+        --SecondaryColor: #25245F;
+        --AccedentColor: #AA54A0;
+    }
+</style>
+ 
+</head>
+<body class="bg-[#0F112B] text-gray-400 font-sans">
+  <!-- Navigation Bar -->
+<nav class="flex flex-wrap items-center justify-between py-4 px-4 md:px-8">
+    <img src="logo.png" class="w-24 md:w-32" alt="Logo">
+  
+    <!-- Hamburger Button -->
+    <label for="menu-toggle" class="md:hidden cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#AA54A0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </label>
+    
+    <!-- Hidden Checkbox for Toggle -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+  
+    <!-- Navigation Links -->
+    <ul 
+      class="hidden peer-checked:flex flex-col md:flex md:flex-row md:space-x-6 lg:space-x-8 font-medium text-lg lg:text-2xl w-full md:w-auto md:items-center mt-4 md:mt-0"
+    >
+      <li><a class="text-white hover:text-[#AA54A0]" href="index.html">Courses</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="Roadmaps.html">Roadmaps</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="forum.html">Forum</a></li>
+      <li><a class="text-white hover:text-[#AA54A0]" href="contact.html">Contact Us</a></li>
+    </ul>
+  
+    <a 
+      href="register.html" 
+      class="btn btn-primary rounded-full py-2 md:py-3 px-5 md:px-6 bg-[#AA54A0] text-white"
+    >
+      register
+    </a>
+  </nav>
+  <div class="ml-[100px] lg:ml-[500px]">
+  <div class=" p-6 rounded-lg shadow-lg w-96 border border-white rounded-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center text-[#AA54A0]">Buuxi Formkaan</h2>
+    <form id="whatsappForm ">
+        <label class="block mb-2 text-white font-bold">Full Name:</label>
+        <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Magacaga oo dhamaystiran" required>
+        <label class="block mb-2 text-white font-bold">WhatsApp Number:</label>
+        <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="e.g. +252612345678" required>
+        <button type="submit" class="w-full bg-[#AA54A0] text-white py-2 rounded text-xl">Register</button>
+    </form>
+    <p id="responseMsg" class="mt-4 text-green-600 hidden">Waa lagu diiwaan galiyay</p>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#whatsappForm").submit(function(event){
+            event.preventDefault();
+            let fullName = $("#name").val();
+            let phoneNumber = $("#phone").val();
+            
+            var settings = {
+                "url": "https://api.ultramsg.com/instance106238/messages/chat",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "token": "pchoujhqv92k915n",
+                    "to": phoneNumber,
+                    "body": fullName + ", waad ku mahadsantahay madama aad iska diiwaan galisay qalin codes fadlan booqo qalin-codes-vy4n.vercel.app "
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $("#responseMsg").removeClass("hidden");
+            });
+        });
+    });
+</script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center text-gray-400 mt-10 border-t border-gray-700 pt-5 pb-10">
+        <p>&copy; 2025 QalinCodes.com - <a href="#" class="text-[#b34fa2] hover:underline">Privacy</a> | <a href="#" class="text-[#b34fa2] hover:underline">Terms of Service</a></p>
+    </div>
+</footer>
+
+ <!-- animation link -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
