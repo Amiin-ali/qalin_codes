@@ -63,32 +63,45 @@
 </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $("#whatsappForm").submit(function(event){
-            event.preventDefault();
-            let fullName = $("#name").val();
-            let phoneNumber = $("#phone").val();
-            
-            var settings = {
-                "url": "https://api.ultramsg.com/instance106238/messages/chat",
-                "method": "POST",
-                "timeout": 0,
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                "data": JSON.stringify({
-                    "token": "pchoujhqv92k915n",
-                    "to": phoneNumber,
-                    "body": fullName + ", waad ku mahadsantahay madama aad iska diiwaan galisay qalin codes fadlan booqo qalin-codes-vy4n.vercel.app "
-                }),
-            };
+  $(document).ready(function () {
+      $("#whatsappForm").submit(function (event) {
+          event.preventDefault();
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-                $("#responseMsg").removeClass("hidden");
-            });
-        });
-    });
+          let fullName = $("#name").val().trim();
+          let phoneNumber = $("#phone").val().trim();
+
+          if (!fullName || !phoneNumber) {
+              alert("Fadlan buuxi dhammaan xogta!");
+              return;
+          }
+
+          console.log("Form submitted with:", fullName, phoneNumber);
+
+          let settings = {
+              url: "https://api.ultramsg.com/instance106238/messages/chat",
+              method: "POST",
+              timeout: 0,
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              data: JSON.stringify({
+                  token: "pchoujhqv92k915n",
+                  to: phoneNumber,
+                  body: `${fullName}, waad ku mahadsantahay madama aad iska diiwaan galisay Qalin Codes. Fadlan booqo: qalin-codes-vy4n.vercel.app`
+              }),
+          };
+
+          $.ajax(settings)
+              .done(function (response) {
+                  console.log("Message Sent:", response);
+                  $("#responseMsg").removeClass("hidden").text("Fariinta waa la diray!");
+              })
+              .fail(function (jqXHR, textStatus, errorThrown) {
+                  console.error("Error:", textStatus, errorThrown);
+                  alert("Fariinta lama dirin. Fadlan dib isku day!");
+              });
+      });
+  });
 </script>
 
   <!-- Footer -->
